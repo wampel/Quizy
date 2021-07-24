@@ -10,9 +10,10 @@ export class AnswersComponent implements OnInit {
   title = "AngularApp";
 
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
   httpData: any;
   counter: number = 1;
+  rightCoutner: number = 0;
 
 
   //Varriables for every buttom
@@ -20,10 +21,39 @@ export class AnswersComponent implements OnInit {
   a3: boolean = false;
   a2: boolean = false;
   a4: boolean = false;
-
   submit() {
     this.counter++;
-    console.log("Question submitted");
+    console.log("Answer submitted");
+
+    if (this.a1 == true) {
+      if (this.httpData.aR == this.httpData.a1) {
+        console.log("right");
+        this.rightCoutner++;
+      }
+    }
+    if (this.a2 == true) {
+      if (this.httpData.aR == this.httpData.a2) {
+        console.log("right");
+        this.rightCoutner++;
+      }
+    }
+    if (this.a3 == true) {
+      if (this.httpData.aR == this.httpData.a3) {
+        console.log("right");
+        this.rightCoutner++;
+      }
+    }
+    if (this.a4 == true) {
+      if (this.httpData.aR == this.httpData.a4) {
+        console.log("right");
+        this.rightCoutner++;
+      }
+    }
+
+    this.a1 = false;
+    this.a2 = false;
+    this.a3 = false;
+    this.a4 = false;
     this.ngOnInit();
   }
 
@@ -54,7 +84,7 @@ export class AnswersComponent implements OnInit {
 
   ngOnInit() {
     this.http.get(`http://localhost:8080/questions/${this.counter}`)
-    .subscribe((data) => this.httpData = data);
+      .subscribe((data) => this.httpData = data);
   }
-  displaydata(data: any) {this.httpData = data;}
+  displaydata(data: any) { this.httpData = data; }
 }

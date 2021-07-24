@@ -1,8 +1,29 @@
-<div>
-<h1>{{httpData.question}}</h1>
-<button (click)="changeOne()">{{httpData.a1}}</button>
-<button (click)="changeTwo()">{{httpData.a2}}</button>
-<button (click)="changeThree()">{{httpData.a3}}</button>
-<button (click)="changeFour()">{{httpData.a4}}</button>
+
+<div class="container">
+    <div class="middle">
+        <div class="inner">
+            <div class="stats">
+            {{counter}} / 10
+        </div>
+
+
+            <div class="buttons">
+
+
+                <p class="headline">
+                    {{httpData.question}}</p>
+                
+                <button (click)="changeOne()" *ngIf="a1" class="wrong">{{httpData.a1}}</button>
+                <button (click)="changeOne()" *ngIf="!a1" class="right">{{httpData.a1}}</button>
+                <button (click)="changeTwo()" *ngIf="a2" class="wrong">{{httpData.a2}}</button>
+                <button (click)="changeTwo()" *ngIf="!a2" class="right">{{httpData.a2}}</button>
+                <button (click)="changeThree()" *ngIf="a3" class="wrong">{{httpData.a3}}</button>
+                <button (click)="changeThree()" *ngIf="!a3" class="right">{{httpData.a3}}</button>
+                <button (click)="changeFour()" *ngIf="a4" class="wrong">{{httpData.a4}}</button>
+                <button (click)="changeFour()" *ngIf="!a4" class="right">{{httpData.a4}}</button>
+                <button class="sub" (click)="submit()" *ngIf="a1 || a2 || a3 || a4">Submit</button>
+                <button class="subNotSel" *ngIf="!a1 && !a2 && !a3 && !a4">Submit</button>
+            </div>
+        </div>
+    </div>
 </div>
-<button class="sub" (click)="submit()" >Submit</button>
