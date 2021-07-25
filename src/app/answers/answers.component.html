@@ -1,18 +1,12 @@
-
 <div class="container">
     <div class="middle">
         <div class="inner">
-            <div class="stats">
-            {{counter}} / 10
-        </div>
-
-
+            <div class="stats"> {{counter}} / 10 </div>
+            <div class="ri"> Points: {{rightCoutner}}</div>
             <div class="buttons">
 
+                <p class="headline">{{httpData.question}}</p>
 
-                <p class="headline">
-                    {{httpData.question}}</p>
-                
                 <button (click)="changeOne()" *ngIf="a1" class="wrong">{{httpData.a1}}</button>
                 <button (click)="changeOne()" *ngIf="!a1" class="right">{{httpData.a1}}</button>
                 <button (click)="changeTwo()" *ngIf="a2" class="wrong">{{httpData.a2}}</button>
