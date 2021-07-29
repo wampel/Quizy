@@ -3,7 +3,6 @@
         <div class="inner">
             <div class="stats"> {{counter}} / 10 </div>
             <div class="ri"> Points: {{rightCoutner}}</div>
-            <div class="buttons">
 
                 <p class="headline">{{httpData.question}}</p>
 
@@ -17,7 +16,6 @@
                 <button (click)="changeFour()" *ngIf="!a4" class="right">{{httpData.a4}}</button>
                 <button class="sub" (click)="submit()" *ngIf="a1 || a2 || a3 || a4">Submit</button>
                 <button class="subNotSel" *ngIf="!a1 && !a2 && !a3 && !a4">Submit</button>
-            </div>
         </div>
     </div>
 </div>
