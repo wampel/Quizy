@@ -1,16 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
+  title = 'AngularApp';
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

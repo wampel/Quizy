@@ -8,12 +8,14 @@ import { AnswersComponent } from './answers/answers.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { GeoComponent } from './geo/geo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnswersComponent,
     HomeComponent,
+    GeoComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     BrowserAnimationsModule,
     MatToolbarModule
   ],
-  providers: [],
+  providers: [HomeComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
