@@ -14,7 +14,7 @@ export class AnswersComponent implements OnInit {
   pathHttpData: any;
   counter: number = 1;
   rightCoutner: number = 0;
-  path: string = "f1";
+  path: string = "geography";
 
 
   //Variables for every button

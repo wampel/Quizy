@@ -2,18 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-geo',
-  templateUrl: './geo.component.html',
-  styleUrls: ['./geo.component.scss']
+  selector: 'app-f1',
+  templateUrl: './f1.component.html',
+  styleUrls: ['./f1.component.scss']
 })
-export class GeoComponent implements OnInit {
+export class F1Component implements OnInit {
+
+  title = 'AngularApp';
 
   constructor(private http: HttpClient) {}
   httpData: any;
   pathHttpData: any;
   counter: number = 1;
   rightCoutner: number = 0;
-  path: string = "geography";
+  path: string = "f1";
 
 
   //Variables for every button

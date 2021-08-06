@@ -5,16 +5,16 @@
             <div class="ri"> Points: {{rightCoutner}}</div>
                 <p class="headline">{{httpData.question}}</p>
 
-                <button (click)="changeOne()" *ngIf="a1" class="wrong">{{httpData.a1}}</button>
-                <button (click)="changeOne()" *ngIf="!a1" class="right">{{httpData.a1}}</button>
-                <button (click)="changeTwo()" *ngIf="a2" class="wrong">{{httpData.a2}}</button>
-                <button (click)="changeTwo()" *ngIf="!a2" class="right">{{httpData.a2}}</button>
-                <button (click)="changeThree()" *ngIf="a3" class="wrong">{{httpData.a3}}</button>
-                <button (click)="changeThree()" *ngIf="!a3" class="right">{{httpData.a3}}</button>
-                <button (click)="changeFour()" *ngIf="a4" class="wrong">{{httpData.a4}}</button>
-                <button (click)="changeFour()" *ngIf="!a4" class="right">{{httpData.a4}}</button>
-                <button class="sub" (click)="submit()" *ngIf="a1 || a2 || a3 || a4">Submit</button>
-                <button class="subNotSel" *ngIf="!a1 && !a2 && !a3 && !a4">Submit</button>
+                <button mat-raised-button color="primary" (click)="changeOne()" *ngIf="a1" class="wrong">{{httpData.a1}}</button>
+                <button mat-raised-button color="primary" (click)="changeOne()" *ngIf="!a1" class="right">{{httpData.a1}}</button>
+                <button mat-raised-button color="primary"(click)="changeTwo()" *ngIf="a2" class="wrong">{{httpData.a2}}</button>
+                <button mat-raised-button color="primary"(click)="changeTwo()" *ngIf="!a2" class="right">{{httpData.a2}}</button>
+                <button mat-raised-button color="primary"(click)="changeThree()" *ngIf="a3" class="wrong">{{httpData.a3}}</button>
+                <button mat-raised-button color="primary"(click)="changeThree()" *ngIf="!a3" class="right">{{httpData.a3}}</button>
+                <button mat-raised-button color="primary"(click)="changeFour()" *ngIf="a4" class="wrong">{{httpData.a4}}</button>
+                <button mat-raised-button color="primary"(click)="changeFour()" *ngIf="!a4" class="right">{{httpData.a4}}</button>
+                <button mat-raised-button color="primary"class="sub" (click)="submit()" *ngIf="a1 || a2 || a3 || a4">Submit</button>
+                <button mat-raised-button color="primary"class="subNotSel" *ngIf="!a1 && !a2 && !a3 && !a4">Submit</button>
         </div>
     </div>
 </div>
